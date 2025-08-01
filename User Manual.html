@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagicBox User Manual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        .header-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
+        }
+        .header-info p {
+            margin: 5px 0;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .tip {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            margin: 20px 0;
+        }
+        .tip strong {
+            color: #27ae60;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .image-row img {
+            flex: 1;
+            max-width: 320px;
+            margin: 0;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #bdc3c7;
+            margin: 40px 0;
+        }
+        .back-link {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .back-link:hover {
+            background-color: #2980b9;
+            text-decoration: none;
+            color: white;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Documentation Home</a>
+    
+    <h1>MagicBox User Manual</h1>
+    
+    <div class="header-info">
+        <p><strong>Firmware Version:</strong> v1.0</p>
+        <p><strong>Document Version:</strong> v1.0</p>
+        <p><strong>Last Updated:</strong> 08/07/2025</p>
+    </div>
+
+    <h2>Introduction</h2>
+
+    <p>The MagicBox (also known as the Magic Shot Box) is the next generation in metadata technology, designed and manufactured in-house at Optical Support. It is a compact, all-in-one control system that streamlines the gathering, recording, and distribution of critical metadata—including lens values, camera orientation, and position—within a single, independent unit.</p>
+
+    <p>Traditionally, collating metadata on set has been a challenging process due to the multitude of information sources. MagicBox solves this by synchronizing multiple input streams independently, each with dedicated processing, resulting in clean, consistent, and reliable data gathering. The system supports accurate frame-by-frame recording of all metadata, with the ability to record on independent streams directly into camera raw footage and onboard to dual micro SD cards.</p>
+
+    <p>At the heart of MagicBox is a custom-built operating system, featuring an intuitive GUI and an accompanying iOS app for seamless access and control. This allows users to easily adjust preferences, perform lens mapping, and manage calibration profiles without the need for external sources. The iOS app further enables effortless sharing of lens mapping data between users, eliminating inconsistencies and ensuring that each lens and its designated camera are always in sync.</p>
+
+    <p>This manual provides a complete guide to setting up, operating, and maintaining your MagicBox unit, including feature walkthroughs and troubleshooting steps.</p>
+
+    <hr>
+
+    <h2>Getting Started</h2>
+
+    <h3>Unboxing and Setup</h3>
+
+    <p>Inside the MagicBox package, you should find:</p>
+
+    <ul>
+        <li>1× MagicBox unit</li>
+        <li>1× RS cable (3 pins)</li>
+        <li>1× TimeCode cable (5 pins)</li>
+        <li>1× Arri L-Bus cable (4 pins)</li>
+        <li>1× Sony L-Bus cable (3 pins)</li>
+        <li>1× Motor Data cable (7 pins)</li>
+        <li>1× Preston MDR junction box</li>
+        <li>1× Quick Start Guide</li>
+        <li>(Optional) Mounting brackets (if ordered)</li>
+    </ul>
+
+    <p>To power on MagicBox:</p>
+    <ol>
+        <li>Power on your camera and plug RS, TimeCode and L-Bus cable for the camera and MagicBox.</li>
+        <li>Power on your Preston MDR kit and plug in the junction box with all the cables indicated.</li>
+        <li>The screen will light up and the system will boot within 5 seconds.</li>
+        <li>You will be greeted with the "Optical Support" first and then asked to select from the available camera modes.</li>
+        <li>Once selected the system will automatically calibrate itself to the L-Bus connection</li>
+        <li>All set, you will be able to see all the metadata available on the home page now.</li>
+    </ol>
+
+    <h3>Wi-Fi Connection to iOS</h3>
+
+    <p>To connect MagicBox with our designated iOS app:</p>
+
+    <ol>
+        <li>Power on your MagicBox unit as usual</li>
+        <li>The device will enter Access Point (AP) mode with an SSID like <code>MagicBox_XXXX</code></li>
+        <li>On your iOS device, join the MagicBox Wi-Fi</li>
+        <li>Open the iOS app and you can now send/receive data wirelessly</li>
+    </ol>
+
+    <h3>Navigating the Interface</h3>
+
+    <p>MagicBox features a fully touchscreen-based interface. Tap the side navigation bar icons to enter key modules:</p>
+
+    <ul>
+        <li><strong>Back</strong> – Return to the previous page</li>
+        <li><strong>Meta</strong> – Metadata: displaying majority of the data info</li>
+        <li><strong>Lens</strong> – Lens Library: manage and select saved lenses</li>
+        <li><strong>IMU</strong> – IMU sensor: displaying the IMU data and management</li>
+        <li><strong>Settings</strong> – User settings menu: modify various settings for the MagicBox</li>
+    </ul>
+
+    <h3>Initial Lens Setup (Quick Example)</h3>
+
+    <p>To add your first lens:</p>
+
+    <ol>
+        <li>Tap <strong>Lens Library</strong></li>
+        <li>Press <strong>"+" Add New</strong></li>
+        <li>Enter the brand, model, and serial number</li>
+        <li>Go back to <strong>Meta</strong> page and click Focus, Iris or Zoom to enter calibration page</li>
+        <li>Save the lens profile when complete</li>
+    </ol>
+
+    <p>Each lens is stored in the internal library and can be edited, deleted, or exported later.</p>
+
+    <div class="image-row">
+        <img src="images/MetaView.png" alt="MetaView Screenshot" />
+        <img src="images/CalibrationView.png" alt="CalibrationView Screenshot" />
+    </div>
+
+    <p>Or if you prefer to use an old-fashioned number pad, you can navigate to the settings menu and toggle it on then repeat the same process above:</p>
+
+    <img src="images/NumPadView.png" alt="NumPad Screenshot" />
+
+    <p>You will then be able to calibrate your lens, starting at any point you prefer. The number of calibration points is up to you, but bear in mind: the more points you use during calibration, the more accurate your metadata will be.</p>
+
+    <h3>Calibrate your first Lens (using iOS app)</h3>
+
+    <p>To perform a lens calibration using the MagicBox iOS app:</p>
+
+    <ol>
+        <li><strong>Connect your iOS device</strong> to the MagicBox Wi-Fi network as described above.</li>
+        <li><strong>Open the MagicBox iOS app.</strong> Ensure your device is connected and click the <strong>Refresh</strong> button on the top right.</li>
+        <li>Tap the <strong>Lens</strong> tab at the bottom of the app interface.</li>
+        <li>Press <strong>"+ Add New Lens"</strong> and enter the lens brand, model, and serial number.</li>
+        <li>Select the lens you just created from the list.</li>
+        <li>Tap the <strong>Hamburg</strong> button on the top left and navigate to <strong>Calibrate</strong> page to begin the calibration process.</li>
+        <li>Follow the on-screen instructions to move the lens through its full range for Focus, Iris, and Zoom (if applicable). The app will prompt you to set calibration points at key positions.</li>
+        <li>When finished, tap <strong>Save</strong>. The calibration data will be stored both on the MagicBox and in the app.</li>
+        <li>You can now go back to the <strong>Lens Table</strong> page and set the lens active.</li>
+    </ol>
+
+    <div class="tip">
+        <p><strong>Tips:</strong></p>
+        <ul>
+            <li><strong>Tip1:</strong> For best results, use as many calibration points as possible, especially for lenses with non-linear focus or zoom curves.</li>
+            <li><strong>Tip2:</strong> Make sure you have <strong>at least one entry</strong> ready on the MagicBox itself.</li>
+            <li><strong>Tip3:</strong> Tap the <strong>Keyboard</strong> button on the top right if FIZ values are not provided in the dial page.</li>
+        </ul>
+    </div>
+
+    <h3>L-Bus Connection (Arri Example)</h3>
+
+    <p>To link your <strong>MagicBox</strong> to an <strong>Arri camera</strong>, follow the steps below:</p>
+
+    <ol>
+        <li><strong>Power on your camera</strong> and plug the corresponding cable to MagicBox.</li>
+        <li><strong>Disable</strong> the <strong>Lens Mount</strong> in the settings menu under <strong>Lens & ECS</strong>. (See the top left image)</li>
+        <li>Select the model on MagicBox (you can also switch camera models during runtime by clicking the name).</li>
+        <li>The camera will display an orange <strong>"CAL"</strong> indicator and soon turn into black, which means MagicBox is automatically connecting itself to your camera (Bottom two images).</li>
+        <li>Once the connection is established (usually within a few seconds), navigate to <strong>Settings → Info → Lens Info</strong> (Top right).</li>
+    </ol>
+
+    <img src="images/CameraConfig.png" alt="Camera Configuration" />
+
+    <h3>Metadata recording</h3>
+
+    <p>To record the metadata that MagicBox is capturing, please follow the instructions below:</p>
+
+    <ol>
+        <li>Navigate to the <strong>Meta</strong> page on MagicBox</li>
+        <li>Make sure you have a SD card inserted in the slot underneath MagicBox</li>
+        <li>Press <strong>REC</strong> on your camera</li>
+        <li>The display will synchronously show a red sign of <strong>"Recording"</strong></li>
+        <li>Press <strong>REC</strong> again whenever you are done with this session</li>
+        <li>Now you can safely removed the SD card from MagicBox by clicking it and insert it to any compatitable card reader on your laptop</li>
+        <li>The session recorded will be named after the <strong>TimeCode</strong> whenever you started the recording, click and open the file you will then be able to see the medadata recorded in every single frame, as illustrated below.</li>
+    </ol>
+
+    <h3>Exporting a Calibrated Lens Profile</h3>
+
+    <p>To export a meticulously calibrated lens profile, please proceed as follows:</p>
+
+    <ol>
+        <li>Navigate to the <strong>Lens Table</strong> page and designate the desired lens as active.</li>
+        <li>Execute long-press upon the entry until an options window appears.</li>
+        <li>Select <strong>Inspect</strong> to enter the detailed lens overview.</li>
+        <li>Within the inspection interface, locate and press the <strong>Export</strong> command on the upper right corner.</li>
+        <li>Choose <strong>Export as JSON file</strong> to save your lens info in .JSON format locally on your phone.</li>
+    </ol>
+
+    <div class="tip">
+        <p><strong>Tip:</strong> To import this lens, use the same <strong>+</strong> button on <strong>Lens Table</strong> page, but this time select <strong>Import from local file</strong></p>
+    </div>
+
+    <hr>
+
+    <p style="text-align: center; color: #666;">
+        <strong>Developed by Optical Support</strong><br>
+        For support, contact: <a href="mailto:osproducts@opticalsupport.com">osproducts@opticalsupport.com</a>
+    </p>
+</body>
+</html>
