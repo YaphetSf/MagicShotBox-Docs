@@ -89,16 +89,8 @@
 
         <div class="nav-section">
             <h2>Documentation</h2>
-            <div class="nav-links">
-                <a href="User Manual.html" class="nav-card">
-                    <h3>📖 User Manual</h3>
-                    <p>Complete guide on how to use MagicShotBox, including setup, calibration, and operation instructions.</p>
-                </a>
-                
-                <a href="privacy-policy.html" class="nav-card">
-                    <h3>🔒 Privacy Policy</h3>
-                    <p>Our privacy policy detailing how we handle data and protect your privacy when using MagicShotBox.</p>
-                </a>
+            <div class="nav-links" id="docLinks">
+                <!-- Documentation links will be populated dynamically -->
             </div>
         </div>
 
@@ -120,5 +112,42 @@
             <p>For support, contact: <a href="mailto:osproducts@opticalsupport.com">osproducts@opticalsupport.com</a></p>
         </div>
     </div>
+
+    <script>
+        // Define available documentation files with their metadata
+        const docs = [
+            {
+                file: 'User Manual.html',
+                title: '📖 User Manual',
+                description: 'Complete guide on how to use MagicShotBox, including setup, calibration, and operation instructions.'
+            },
+            {
+                file: 'privacy-policy.html',
+                title: '🔒 Privacy Policy',
+                description: 'Our privacy policy detailing how we handle data and protect your privacy when using MagicShotBox.'
+            }
+        ];
+
+        // Function to populate documentation links
+        function populateDocLinks() {
+            const docLinksContainer = document.getElementById('docLinks');
+            
+            docs.forEach(doc => {
+                const linkCard = document.createElement('a');
+                linkCard.href = doc.file;
+                linkCard.className = 'nav-card';
+                
+                linkCard.innerHTML = `
+                    <h3>${doc.title}</h3>
+                    <p>${doc.description}</p>
+                `;
+                
+                docLinksContainer.appendChild(linkCard);
+            });
+        }
+
+        // Populate links when page loads
+        document.addEventListener('DOMContentLoaded', populateDocLinks);
+    </script>
 </body>
 </html>
