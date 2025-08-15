@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MagicBox User Manual</title>
+    <title>MagicShotBox User Manual</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -104,23 +104,23 @@
 <body>
     <a href="index.html" class="back-link">← Back to Documentation Home</a>
     
-    <h1>MagicBox User Manual</h1>
+    <h1>MagicShotBox User Manual</h1>
     
     <div class="header-info">
         <p><strong>Firmware Version:</strong> v1.0</p>
         <p><strong>Document Version:</strong> v1.0</p>
-        <p><strong>Last Updated:</strong> 08/07/2025</p>
+        <p><strong>Last Updated:</strong> 18/07/2025</p>
     </div>
 
     <h2>Introduction</h2>
 
-    <p>The MagicBox (also known as the Magic Shot Box) is the next generation in metadata technology, designed and manufactured in-house at Optical Support. It is a compact, all-in-one control system that streamlines the gathering, recording, and distribution of critical metadata—including lens values, camera orientation, and position—within a single, independent unit.</p>
+    <p>The MagicShotBox (also known as MagicBox) is the next generation in metadata technology, designed and manufactured in-house at Optical Support. It is a compact, all-in-one control system that streamlines the gathering, recording, and distribution of critical metadata—including lens values, camera orientation, and position—within a single, independent unit.</p>
 
-    <p>Traditionally, collating metadata on set has been a challenging process due to the multitude of information sources. MagicBox solves this by synchronizing multiple input streams independently, each with dedicated processing, resulting in clean, consistent, and reliable data gathering. The system supports accurate frame-by-frame recording of all metadata, with the ability to record on independent streams directly into camera raw footage and onboard to dual micro SD cards.</p>
+    <p>Traditionally, collating metadata on set has been a challenging process due to the multitude of information sources. MagicShotBox solves this by synchronizing multiple input streams independently, each with dedicated processing, resulting in clean, consistent, and reliable data gathering. The system supports accurate frame-by-frame recording of all metadata, with the ability to record on independent streams directly into camera raw footage and onboard to dual micro SD cards.</p>
 
-    <p>At the heart of MagicBox is a custom-built operating system, featuring an intuitive GUI and an accompanying iOS app for seamless access and control. This allows users to easily adjust preferences, perform lens mapping, and manage calibration profiles without the need for external sources. The iOS app further enables effortless sharing of lens mapping data between users, eliminating inconsistencies and ensuring that each lens and its designated camera are always in sync.</p>
+    <p>At the heart of MagicShotBox is a custom-built operating system, featuring an intuitive GUI and an accompanying iOS app for seamless access and control. This allows users to easily adjust preferences, perform lens mapping, and manage calibration profiles without the need for external sources. The iOS app further enables effortless sharing of lens mapping data between users, eliminating inconsistencies and ensuring that each lens and its designated camera are always in sync.</p>
 
-    <p>This manual provides a complete guide to setting up, operating, and maintaining your MagicBox unit, including feature walkthroughs and troubleshooting steps.</p>
+    <p>This manual provides a complete guide to setting up, operating, and maintaining your MagicShotBox unit, including feature walkthroughs and troubleshooting steps.</p>
 
     <hr>
 
@@ -128,23 +128,25 @@
 
     <h3>Unboxing and Setup</h3>
 
-    <p>Inside the MagicBox package, you should find:</p>
+    <p>Inside the MagicShotBox package, you should find:</p>
 
     <ul>
-        <li>1× MagicBox unit</li>
-        <li>1× RS cable (3 pins)</li>
-        <li>1× TimeCode cable (5 pins)</li>
-        <li>1× Arri L-Bus cable (4 pins)</li>
-        <li>1× Sony L-Bus cable (3 pins)</li>
-        <li>1× Motor Data cable (7 pins)</li>
-        <li>1× Preston MDR junction box</li>
+        <li>1× Main unit with screen</li>
+        <li>2× RS cable (3 pins)</li>
+        <li>2× TimeCode cable (5 pins)</li>
+        <li>2× Arri cable (4 pins)</li>
+        <li>2× Sony/RED cable (6 pins)</li>
+        <li>2× Motor Data cable (7 pins)</li>
+        <li>1× Connector Unit MDR3/5</li>
+        <li>1× Connector Unit MDR4</li>
+        <li>1× Connector Unit MDR2 (optional extra)</li>
         <li>1× Quick Start Guide</li>
         <li>(Optional) Mounting brackets (if ordered)</li>
     </ul>
 
-    <p>To power on MagicBox:</p>
+    <p>To power on MagicShotBox:</p>
     <ol>
-        <li>Power on your camera and plug RS, TimeCode and L-Bus cable for the camera and MagicBox.</li>
+        <li>Power on your camera and plug RS, TimeCode and L-Bus cable for the camera and MagicShotBox.</li>
         <li>Power on your Preston MDR kit and plug in the junction box with all the cables indicated.</li>
         <li>The screen will light up and the system will boot within 5 seconds.</li>
         <li>You will be greeted with the "Optical Support" first and then asked to select from the available camera modes.</li>
@@ -154,25 +156,25 @@
 
     <h3>Wi-Fi Connection to iOS</h3>
 
-    <p>To connect MagicBox with our designated iOS app:</p>
+    <p>To connect MagicShotBox with our designated iOS app:</p>
 
     <ol>
-        <li>Power on your MagicBox unit as usual</li>
-        <li>The device will enter Access Point (AP) mode with an SSID like <code>MagicBox_XXXX</code></li>
-        <li>On your iOS device, join the MagicBox Wi-Fi</li>
+        <li>Power on your MagicShotBox unit as usual</li>
+        <li>The device will enter Access Point (AP) mode with an SSID like <code>MagicShotBox_XXXX</code></li>
+        <li>On your iOS device, join the MagicShotBox Wi-Fi</li>
         <li>Open the iOS app and you can now send/receive data wirelessly</li>
     </ol>
 
     <h3>Navigating the Interface</h3>
 
-    <p>MagicBox features a fully touchscreen-based interface. Tap the side navigation bar icons to enter key modules:</p>
+    <p>MagicShotBox features a fully touchscreen-based interface. Tap the side navigation bar icons to enter key modules:</p>
 
     <ul>
         <li><strong>Back</strong> – Return to the previous page</li>
         <li><strong>Meta</strong> – Metadata: displaying majority of the data info</li>
         <li><strong>Lens</strong> – Lens Library: manage and select saved lenses</li>
         <li><strong>IMU</strong> – IMU sensor: displaying the IMU data and management</li>
-        <li><strong>Settings</strong> – User settings menu: modify various settings for the MagicBox</li>
+        <li><strong>Settings</strong> – User settings menu: modify various settings for the MagicShotBox</li>
     </ul>
 
     <h3>Initial Lens Setup (Quick Example)</h3>
@@ -202,17 +204,17 @@
 
     <h3>Calibrate your first Lens (using iOS app)</h3>
 
-    <p>To perform a lens calibration using the MagicBox iOS app:</p>
+    <p>To perform a lens calibration using the MagicShotBox iOS app:</p>
 
     <ol>
-        <li><strong>Connect your iOS device</strong> to the MagicBox Wi-Fi network as described above.</li>
-        <li><strong>Open the MagicBox iOS app.</strong> Ensure your device is connected and click the <strong>Refresh</strong> button on the top right.</li>
+        <li><strong>Connect your iOS device</strong> to the MagicShotBox Wi-Fi network as described above.</li>
+        <li><strong>Open the MagicShotBox iOS app.</strong> Ensure your device is connected and click the <strong>Refresh</strong> button on the top right.</li>
         <li>Tap the <strong>Lens</strong> tab at the bottom of the app interface.</li>
         <li>Press <strong>"+ Add New Lens"</strong> and enter the lens brand, model, and serial number.</li>
         <li>Select the lens you just created from the list.</li>
         <li>Tap the <strong>Hamburg</strong> button on the top left and navigate to <strong>Calibrate</strong> page to begin the calibration process.</li>
         <li>Follow the on-screen instructions to move the lens through its full range for Focus, Iris, and Zoom (if applicable). The app will prompt you to set calibration points at key positions.</li>
-        <li>When finished, tap <strong>Save</strong>. The calibration data will be stored both on the MagicBox and in the app.</li>
+        <li>When finished, tap <strong>Save</strong>. The calibration data will be stored both on the MagicShotBox and in the app.</li>
         <li>You can now go back to the <strong>Lens Table</strong> page and set the lens active.</li>
     </ol>
 
@@ -220,20 +222,19 @@
         <p><strong>Tips:</strong></p>
         <ul>
             <li><strong>Tip1:</strong> For best results, use as many calibration points as possible, especially for lenses with non-linear focus or zoom curves.</li>
-            <li><strong>Tip2:</strong> Make sure you have <strong>at least one entry</strong> ready on the MagicBox itself.</li>
-            <li><strong>Tip3:</strong> Tap the <strong>Keyboard</strong> button on the top right if FIZ values are not provided in the dial page.</li>
+            <li><strong>Tip2:</strong> Tap the <strong>Keyboard</strong> button on the top right if FIZ values are not provided in the dial page.</li>
         </ul>
     </div>
 
     <h3>L-Bus Connection (Arri Example)</h3>
 
-    <p>To link your <strong>MagicBox</strong> to an <strong>Arri camera</strong>, follow the steps below:</p>
+    <p>To link your <strong>MagicShotBox</strong> to an <strong>Arri camera</strong>, follow the steps below:</p>
 
     <ol>
-        <li><strong>Power on your camera</strong> and plug the corresponding cable to MagicBox.</li>
+        <li><strong>Power on your camera</strong> and plug the corresponding cable to MagicShotBox.</li>
         <li><strong>Disable</strong> the <strong>Lens Mount</strong> in the settings menu under <strong>Lens & ECS</strong>. (See the top left image)</li>
-        <li>Select the model on MagicBox (you can also switch camera models during runtime by clicking the name).</li>
-        <li>The camera will display an orange <strong>"CAL"</strong> indicator and soon turn into black, which means MagicBox is automatically connecting itself to your camera (Bottom two images).</li>
+        <li>Select the model on MagicShotBox (you can also switch camera models during runtime by clicking the name).</li>
+        <li>The camera will display an orange <strong>"CAL"</strong> indicator and soon turn into black, which means MagicShotBox is automatically connecting itself to your camera (Bottom two images).</li>
         <li>Once the connection is established (usually within a few seconds), navigate to <strong>Settings → Info → Lens Info</strong> (Top right).</li>
     </ol>
 
@@ -241,15 +242,15 @@
 
     <h3>Metadata recording</h3>
 
-    <p>To record the metadata that MagicBox is capturing, please follow the instructions below:</p>
+    <p>To record the metadata that MagicShotBox is capturing, please follow the instructions below:</p>
 
     <ol>
-        <li>Navigate to the <strong>Meta</strong> page on MagicBox</li>
-        <li>Make sure you have a SD card inserted in the slot underneath MagicBox</li>
+        <li>Navigate to the <strong>Meta</strong> page on MagicShotBox</li>
+        <li>Make sure you have a SD card inserted in the slot underneath MagicShotBox</li>
         <li>Press <strong>REC</strong> on your camera</li>
         <li>The display will synchronously show a red sign of <strong>"Recording"</strong></li>
         <li>Press <strong>REC</strong> again whenever you are done with this session</li>
-        <li>Now you can safely removed the SD card from MagicBox by clicking it and insert it to any compatitable card reader on your laptop</li>
+        <li>Now you can safely removed the SD card from MagicShotBox by clicking it and insert it to any compatitable card reader on your laptop</li>
         <li>The session recorded will be named after the <strong>TimeCode</strong> whenever you started the recording, click and open the file you will then be able to see the medadata recorded in every single frame, as illustrated below.</li>
     </ol>
 
